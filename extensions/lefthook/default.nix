@@ -18,7 +18,7 @@ with pkgs.lib; let
   extra = ''
     # Install configured hooks
     for stage in ${stagesStr}; do
-      ${lefthook}/bin/lefthook add -a "$stage"
+      ${lefthook}/bin/lefthook add "$stage"
     done
   '';
 in {
